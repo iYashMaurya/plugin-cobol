@@ -51,7 +51,7 @@ dependencies {
     compileOnly group: "io.kestra", name: "core", version: kestraVersion
     compileOnly group: "io.kestra", name: "script", version: kestraVersion
 
-    implementation 'net.sf.jt400:jt400:11.1'
+    implementation 'net.sf.jt400:jt400:21.0.6'
 }
 
 
