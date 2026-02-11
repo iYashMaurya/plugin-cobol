@@ -41,6 +41,7 @@ dependencies {
     annotationProcessor enforcedPlatform("io.kestra:platform:$kestraVersion")
     implementation enforcedPlatform("io.kestra:platform:$kestraVersion")
 
+
     // lombok
     annotationProcessor "org.projectlombok:lombok"
     compileOnly "org.projectlombok:lombok"
@@ -49,6 +50,8 @@ dependencies {
     annotationProcessor group: "io.kestra", name: "processor", version: kestraVersion
     compileOnly group: "io.kestra", name: "core", version: kestraVersion
     compileOnly group: "io.kestra", name: "script", version: kestraVersion
+
+    implementation 'net.sf.jt400:jt400:11.1'
 }
 
 
@@ -175,8 +178,8 @@ jar {
     manifest {
         attributes(
             "X-Kestra-Name": project.name,
-            "X-Kestra-Title": "Template",
-            "X-Kestra-Group": project.group + ".templates",
+            "X-Kestra-Title": "IBM i COBOL",
+            "X-Kestra-Group": project.group + ".cobol",
             "X-Kestra-Description": project.description,
             "X-Kestra-Version": project.version
         )
